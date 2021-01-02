@@ -5,33 +5,37 @@ void main() => runApp(MyCoolApp());
 class MyCoolApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      'Sukriye aşağıdaki milletlerden hangisiyle evlencek',
-    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text(
+            'My First App',
+          ),
         ),
         body: Column(
           children: <Widget>[
-            Text('Question '),
-            RaisedButton(
-              child: Text('Answer 1'),
-              onPressed: null,
+            Text(
+              'Question ?',
+              style: TextStyle(
+                  color: Colors.purple,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Google Sans",
+                  fontStyle: FontStyle.italic,
+                  fontSize: 25),
             ),
             RaisedButton(
-              child: Text('Answer 2'),
-              onPressed: null,
+              onPressed: () {},
+              child: Text(
+                'Answer 1',
+              ),
+              shape: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(15))),
             ),
-            RaisedButton(
-              child: Text('Answer 3'),
-              onPressed: null,
-            ),
-            RaisedButton(
-              child: Text('Answer 4'),
-              onPressed: null,
-            ),
+            RaisedButton(child: Text('Answer'), onPressed: null),
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.favorite),
+            )
           ],
         ),
       ),
