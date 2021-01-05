@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
 
 void main() => runApp(MyCoolApp());
 
@@ -31,26 +32,9 @@ class _MyCoolAppState extends State<MyCoolApp> {
           Question(
             questions[_questionIndex],
           ),
-          RaisedButton(
-            onPressed: _answerQuestions,
-            child: Text(
-              'Answer 1',
-              style: TextStyle(
-                  color: Colors.purple,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Google Sans",
-                  fontStyle: FontStyle.italic,
-                  fontSize: 25),
-            ),
-            shape: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(15))),
-          ),
-          RaisedButton(
-            onPressed: _answerQuestions,
-            child: Text('Answer 2'),
-            shape: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(15))),
-          ),
+          Answer(_answerQuestions),
+          Answer(_answerQuestions),
+          Answer(_answerQuestions),
           FloatingActionButton(
             onPressed: _answerQuestions,
             child: Icon(Icons.favorite),
